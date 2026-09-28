@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>JARVIS AI Assistant</title>
+</head>
+<body>
+<main class="app">
+  <header>
+    <div><span class="eyebrow">VOICE AI</span><h1>JARVIS</h1></div>
+    <span class="badge">FREE</span>
+  </header>
+
+  <section class="hero">
+    <div id="orb" class="orb">
+      <div class="ring r1"></div><div class="ring r2"></div>
+      <div class="core">J</div>
+    </div>
+    <p id="status">Ready for your command</p>
+    <p id="heard"></p>
+  </section>
+
+  <section class="controls">
+    <button id="mic" class="mic" title="Voice command">🎙</button>
+    <input id="input" placeholder="Type a command..." autocomplete="off">
+    <button id="send">Send</button>
+  </section>
+
+  <section class="chips">
+    <button data-cmd="What time is it?">Time</button>
+    <button data-cmd="Open YouTube">YouTube</button>
+    <button data-cmd="Search Google for latest AI news">Search</button>
+    <button data-cmd="Help">Help</button>
+  </section>
+
+  <section class="panel">
+    <div class="panel-title">Command Log <button id="clearLog">Clear</button></div>
+    <div id="log"></div>
+  </section>
+
+  <footer>Browser-based JARVIS • No paid API key required</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

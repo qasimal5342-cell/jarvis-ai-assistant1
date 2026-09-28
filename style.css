@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 25%,#102943,#030811 55%);color:#eaf7ff;font-family:Inter,system-ui,Arial,sans-serif}
+.app{width:min(760px,100%);margin:auto;padding:22px 18px 30px}
+header{display:flex;align-items:center;justify-content:space-between}
+.eyebrow{font-size:11px;letter-spacing:4px;color:#6bdcff}
+h1{margin:2px 0;font-size:30px;letter-spacing:5px}
+.badge{font-size:11px;border:1px solid #1d6688;padding:7px 10px;border-radius:20px;color:#76dcff}
+.hero{text-align:center;padding:55px 0 35px}
+.orb{width:220px;height:220px;margin:auto;position:relative;display:grid;place-items:center}
+.core{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;font-size:54px;font-weight:800;color:#bdf4ff;background:radial-gradient(circle,#16476b,#07121f 65%);border:2px solid #56d9ff;box-shadow:0 0 25px #27bffb,0 0 80px #0b557d}
+.ring{position:absolute;border:1px solid #2588b8;border-radius:50%;inset:15px;animation:spin 7s linear infinite}
+.r2{inset:35px;border-style:dashed;animation-direction:reverse;animation-duration:5s}
+.orb.listening .core{box-shadow:0 0 35px #fff,0 0 100px #2ad8ff}
+.orb.listening .ring{animation-duration:1.5s}
+#status{color:#86c9e7;margin:18px 0 4px}
+#heard{color:#547187;font-size:12px;min-height:18px}
+.controls{display:flex;gap:9px}
+.controls input{flex:1;min-width:0;background:#081422;border:1px solid #21445d;color:white;border-radius:12px;padding:14px;font-size:15px}
+.controls button{border:0;border-radius:12px;padding:0 16px;background:#28b9f2;color:#00101a;font-weight:800}
+.mic{width:52px;font-size:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+.chips button,#clearLog{background:#0c1a2b;border:1px solid #1c4664;color:#bdeeff;border-radius:10px;padding:10px 13px;cursor:pointer}
+.panel{background:#06101c;border:1px solid #17354d;border-radius:15px;padding:14px;min-height:150px}
+.panel-title{display:flex;justify-content:space-between;color:#8edcf7;font-size:13px;margin-bottom:10px}
+#log{max-height:240px;overflow:auto}
+.entry{padding:8px 4px;border-bottom:1px solid #10283a;font-size:13px}
+.you{color:#bcecff}.jarvis{color:#77e2b5}
+footer{text-align:center;color:#547187;font-size:11px;margin-top:20px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:520px){.app{padding:16px 12px}.hero{padding:38px 0 25px}.orb{width:190px;height:190px}.core{width:98px;height:98px}.controls{flex-wrap:wrap}.controls input{order:2;flex-basis:calc(100% - 61px)}.controls #send{order:3;height:48px}.mic{height:48px}}
